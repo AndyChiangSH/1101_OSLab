@@ -1,0 +1,1 @@
+cmd_/home/andy/modules/module_C.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/andy/modules/module_C.ko /home/andy/modules/module_C.o /home/andy/modules/module_C.mod.o;  true

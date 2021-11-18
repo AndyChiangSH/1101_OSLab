@@ -1,0 +1,1 @@
+cmd_/home/andy/Lab05/test/mod1.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/andy/Lab05/test/mod1.ko /home/andy/Lab05/test/mod1.o /home/andy/Lab05/test/mod1.mod.o;  true
