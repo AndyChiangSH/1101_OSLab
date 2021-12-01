@@ -12,4 +12,5 @@
 * **Lab09** - Thread Management
 * **Lab10** - Fork_join
 * **Lab11** - Thread Local Storage and Thread Cancellation Points
+* **Lab12** - Signals
 * **Midterm** - 期中上機考題
