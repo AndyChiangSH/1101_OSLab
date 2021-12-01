@@ -11,4 +11,5 @@
 * **Lab08** - Socket Programming with UDP
 * **Lab09** - Thread Management
 * **Lab10** - Fork_join
+* **Lab11** - Thread Local Storage and Thread Cancellation Points
 * **Midterm** - 期中上機考題
