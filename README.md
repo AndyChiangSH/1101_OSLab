@@ -11,6 +11,7 @@
 * **Lab08** - Socket Programming with UDP
 * **Lab09** - Thread Management
 * **Lab10** - Fork_join
-* **Lab11** - Thread Local Storage and Thread Cancellation Points
-* **Lab12** - Signals
+* **Lab11-1** - Thread Local Storage and Thread Cancellation Points
+* **Lab11-2** - Signals
+* **Lab12** - Semaphores
 * **Midterm** - 期中上機考題
