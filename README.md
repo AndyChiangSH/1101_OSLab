@@ -17,4 +17,5 @@
 * **Lab13** - Mutex and Condition Variables
 * **Lab14** - Java Monitor
 * **Lab15** - Static Library v.s Dynamic Library
+* **Lab16** - Paging
 * **Midterm** - 期中上機考題
