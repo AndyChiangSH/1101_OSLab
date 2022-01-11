@@ -49,7 +49,9 @@ public class Warehouse {
 					System.out.println("FULL!");
 					threadCond.await();
 				}
-				catch(InterruptedException e) {e.printStackTrace();}
+				catch(InterruptedException e) {
+					e.printStackTrace();
+				}
 			}
 			product++;
 			System.out.println("Producer: "+product);
@@ -69,7 +71,9 @@ public class Warehouse {
 					System.out.println("EMPTY!");
 					threadCond.await();
 				}
-				catch(InterruptedException e) {e.printStackTrace();}
+				catch(InterruptedException e) {
+					e.printStackTrace();
+				}
 			}
 			product--;
 			System.out.println("Consummer: "+product);

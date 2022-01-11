@@ -14,7 +14,7 @@ struct msg_form {
 int msqid;
 pthread_t tsender, treceiver;
 
-void *sender(void *addr) {
+void *sender(void *arg) {
 	struct msg_form msg;
 	while(1) {
 		msg.mtype = 2;
@@ -30,7 +30,7 @@ void *sender(void *addr) {
 	pthread_exit(NULL);
 }
 
-void *receiver(void *addr) {
+void *receiver(void *arg) {
 	struct msg_form msg;
 	while(1) {		
 		msgrcv(msqid, &msg, MAX_SIZE, 1, 0);
@@ -58,13 +58,13 @@ int main() {
 	}
 
 	// thread setting
-	int r, t = 0;
-	r = pthread_create(&tsender, NULL, sender, &t);
+	int r;
+	r = pthread_create(&tsender, NULL, sender, NULL);
 	if(r) {
 		printf("CREATE ERROR");
 		exit(-1);
 	}
-	r = pthread_create(&treceiver, NULL, receiver, &t);
+	r = pthread_create(&treceiver, NULL, receiver, NULL);
 	if(r) {
 		printf("CREATE ERROR");
 		exit(-1);

@@ -9,6 +9,7 @@ void SIGALRM_handler2() {
 }
 
 void SIGINT_handler2() {
+	signal(SIGINT, SIGINT_handler2);
 	printf("I am fine!\n");
 }
 
@@ -19,6 +20,7 @@ void SIGALRM_handler1() {
 }
 
 void SIGINT_handler1() {
+	signal(SIGINT, SIGINT_handler1);
 	printf("How are you?\n");
 }
 

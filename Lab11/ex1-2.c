@@ -18,17 +18,15 @@ int main(void) {
 	else if(pid == 0) {
 		printf("I am child, pid = %d, ppid = %d\n", getpid(), getppid());
 		alarm(3);
-		for(;;) {
-			pause();
-		}
+
+		pause();
 		exit(0);
 	}
 	else {
 		printf("I am parent, pid = %d, ppid = %d\n", getpid(), getppid());
 		alarm(5);
-		for(;;) {
-			pause();
-		}
+
+		pause();
 	}
 
 	return 0;

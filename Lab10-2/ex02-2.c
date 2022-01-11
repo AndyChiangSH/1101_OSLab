@@ -3,14 +3,15 @@
 #include <pthread.h>
 #include <unistd.h>
 
-int gresult = 0;
+int* result;
 void* child(void* arg) {
 	printf("child thread:\n");
 	int* input = (int*) arg;
-	int* result = malloc(sizeof(int)*1);
-	// result[0] = input[0] + input[1];
-	gresult = input[0] + input[1];
+	result = malloc(sizeof(int)*1);
+	*result = input[0] + input[1];
+	
 	sleep(5);
+	
 	pthread_exit((void*) result);
 }
 
@@ -26,17 +27,20 @@ int main() {
 		sleep(1);
 		printf("sleep: %d\n", i);
 	}
+
 	int r = pthread_cancel(t);
-	printf("r = %d\n", r);
-	printf("pthread_cancel successfully\n");
+	if(r) {
+		printf("pthread_cancel fail\n");
+		return 0;
+	}
+	else {
+		printf("pthread_cancel successfully\n");	
+	}
 	
 	printf("main thread:\n");
+	printf("%d + %d = %d\n", input[0], input[1], *result);
 	
-	int* result = (int*) ret;
-	// printf("%d + %d = %d\n", input[0], input[1], result[0]);
-	printf("%d + %d = %d\n", input[0], input[1], gresult);
-	
-	// free(result);
+	free(result);
 	
 	return 0;
 }

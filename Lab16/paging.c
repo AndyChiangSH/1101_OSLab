@@ -10,7 +10,6 @@ int main(void) {
 	for(int i = 0; i < 3; i++) {
 		srand(time(NULL));
 		while(1) {
-			int is_dup = 0;
 			int t = rand()%16;
 			if(freeframe[t] == 0) {
 				pt1[i] = t;
@@ -38,7 +37,6 @@ int main(void) {
 	for(int i = 0; i < 3; i++) {
 		srand(time(NULL));
 		while(1) {
-			int is_dup = 0;
 			int t = rand()%16;
 			if(freeframe[t] == 0) {
 				pt2[i] = t;
