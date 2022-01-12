@@ -19,3 +19,4 @@
 * **Lab15** - Static Library v.s Dynamic Library
 * **Lab16** - Paging
 * **Midterm** - 期中上機考題
+* **Final** - 期末上機考題
